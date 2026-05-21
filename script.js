@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   function NewTab() {
-        // Open resume in a new tab
-        window.open("Monu-Singh-Resume.pdf", "_blank");
+        // Open resume in a new tab (use root-relative path for GitHub Pages)
+        window.open("/Monu-Singh-Resume.pdf", "_blank");
         // Also create an invisible anchor to trigger download
         const a = document.createElement("a");
-        a.href = "Monu-Singh-Resume.pdf";
+        a.href = "/Monu-Singh-Resume.pdf";
         a.download = "Monu-Singh-Resume.pdf";
         a.style.display = "none";
         document.body.appendChild(a);
