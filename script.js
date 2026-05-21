@@ -65,6 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let resume2 = document
     .getElementById("resume-button-2")
     .addEventListener("click", NewTab);
+  let hireMe = document
+    .getElementById("resume-link-home")
+    .addEventListener("click", function(e) {
+      e.preventDefault();
+      NewTab();
+    });
 
   function NewTab() {
         // Open resume in a new tab
