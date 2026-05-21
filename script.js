@@ -59,19 +59,19 @@ $(document).ready(function(){
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let resume1 = document
-    .getElementById("resume-button-1")
+  document
+    .getElementById("resume-link-nav")
     .addEventListener("click", function(e) {
       e.preventDefault();
       NewTab();
     });
-  let resume2 = document
-    .getElementById("resume-button-2")
+  document
+    .getElementById("resume-link-about")
     .addEventListener("click", function(e) {
       e.preventDefault();
       NewTab();
     });
-  let hireMe = document
+  document
     .getElementById("resume-link-home")
     .addEventListener("click", function(e) {
       e.preventDefault();
