@@ -61,10 +61,16 @@ $(document).ready(function(){
 document.addEventListener("DOMContentLoaded", function () {
   let resume1 = document
     .getElementById("resume-button-1")
-    .addEventListener("click", NewTab);
+    .addEventListener("click", function(e) {
+      e.preventDefault();
+      NewTab();
+    });
   let resume2 = document
     .getElementById("resume-button-2")
-    .addEventListener("click", NewTab);
+    .addEventListener("click", function(e) {
+      e.preventDefault();
+      NewTab();
+    });
   let hireMe = document
     .getElementById("resume-link-home")
     .addEventListener("click", function(e) {
