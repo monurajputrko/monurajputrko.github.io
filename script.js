@@ -67,10 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", NewTab);
 
   function NewTab() {
-    window.open(
-      "https://drive.google.com/file/d/1ZdWrkJjuQXeZx8UQUJdO1ZsJVYdOdlm8/view?usp=sharing",
-      "_blank"
-    );
+        // Open resume in a new tab
+        window.open("Monu-Singh-Resume.pdf", "_blank");
+        // Also create an invisible anchor to trigger download
+        const a = document.createElement("a");
+        a.href = "Monu-Singh-Resume.pdf";
+        a.download = "Monu-Singh-Resume.pdf";
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
   }
 });
 

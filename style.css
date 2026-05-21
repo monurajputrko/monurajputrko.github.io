@@ -854,6 +854,32 @@ a{
     margin-bottom: 40px;
 }
 
+/* Soft skills grid: reuse tech grid sizing to keep cards identical */
+.ss_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin: 20px 0 40px 0;
+}
+
+.ss_grid .skills-card {
+    padding: 24px;
+    height: 160px; /* force square-ish look consistent with tech cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ss_grid .skills-card > img {
+    width: 48%;
+    height: auto;
+}
+
+.ss_grid .skills-card > span {
+    margin-top: 12px;
+}
+
 .bs_container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -888,6 +914,45 @@ a{
 
 .skills-card{
     border: 3px solid #9D58D1;
+}
+
+/* Soft Skills specific styles */
+.soft-skills .title { text-align: center; }
+.ss_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 20px 0 40px 0;
+}
+.ss_container .skills-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    cursor: default;
+}
+.ss_container .skills-card i {
+    font-size: 20px;
+    color: #9D58D1;
+}
+.ss_container .skills-card span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+
+@media screen and (max-width: 768px) {
+    .ss_container .skills-card {
+        padding: 10px 16px;
+        gap: 8px;
+    }
+    .ss_container .skills-card span {
+        font-size: 14px;
+    }
 }
 
 .skills-card>span {
